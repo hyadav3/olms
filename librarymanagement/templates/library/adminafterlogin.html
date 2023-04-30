@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LMS Admin Control Panel</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.2/css/bootstrap.min.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Custom CSS -->
+    <style>
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: #f8f9fa;
+      }
+      .btn-circle.btn-xl {
+        width: 70px;
+        height: 70px;
+        padding: 10px 16px;
+        border-radius: 35px;
+        font-size: 24px;
+        line-height: 1.33;
+      }
+      .btn-circle {
+        width: 30px;
+        height: 30px;
+        padding: 6px 0px;
+        border-radius: 15px;
+        text-align: center;
+        font-size: 12px;
+        line-height: 1.42857;
+      }
+      .jumbotron {
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 40px;
+      }
+      .jumbotron h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 48px;
+        margin-bottom: 20px;
+      }
+      .jumbotron p {
+        font-size: 20px;
+        line-height: 1.5;
+        margin-bottom: 30px;
+      }
+      .jumbotron hr {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border: 1px solid #6c757d;
+      }
+      .options a {
+        margin-right: 20px;
+        margin-bottom: 20px;
+        font-size: 24px;
+        border-radius: 10px;
+      }
+      .options a:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      }
+      .options .btn-add {
+        background-color: #4CAF50;
+        border-color: #4CAF50;
+      }
+      .options .btn-add:hover {
+        background-color: #3e8e41;
+        border-color: #3e8e41;
+      }
+      .options .btn-view {
+        background-color: #007bff;
+        border-color: #007bff;
+      }
+      .options .btn-view:hover {
+        background-color: #0069d9;
+        border-color: #0069d9;
+      }
+      .options .btn-issue {
+        background-color: #ffc107;
+        border-color: #ffc107;
+      }
+      .options .btn-issue:hover {
+        background-color: #e0a800;
+        border-color: #e0a800;
+      }
+    </style>
+  </head>
+  <body>
+    {% include "library/navbaradmin.html" %}
+    <br>
+    <br>
+    <center><h3 style=" margin-bottom: 0px;"class = 'alert alert-success'>Welcome to Online library !</h3></center>
+    <div class="jumbotron"   style="    margin-bottom: 0px;">
+    <h1 class="display-4">Hello {{user.first_name}} !</h1>
+    <p class="lead">You have the ability to add and view books in the library, as well as delete books.
+
+    </p>
+    <hr class="my-4">
+    <p>Available Features</p>
+    <div class="options" style="text-align:center">
+      <a href="addbook" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Add Book To Library</a><br><br>
+      <a href="viewbook" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">View Available Book</a><br><br>
+      <a href="deletebook" class="btn btn-primary btn-lg active" role="button" aria-pressed="true">Delete Book</a><br><br>
+    </div>
+
+    </div>
+
+
+    {% include "library/footer.html" %}
+  </body>
+</html>
